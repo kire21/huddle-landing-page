@@ -20,6 +20,8 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--color-dark-cyan);
 }
 
 h1,
@@ -28,13 +30,24 @@ h3,
 h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 
 /* Button */
 .btn {
   font-size: 1.4rem;
   font-weight: 700;
-  padding: 1.5rem 6rem;
+  padding: 1.2rem 5rem;
   border: 0;
   border-radius: 40px;
   cursor: pointer;
@@ -42,6 +55,8 @@ h4 {
 }
 
 .btn--pink {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
   background: var(--color-pink);
   color: #fff;
 }
@@ -52,7 +67,8 @@ h4 {
 }
 
 .btn--white {
-  padding: 1rem 2.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
   background: #fff;
   color: var(--color-dark-cyan);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
@@ -63,6 +79,24 @@ h4 {
   transition: color 0.3s;
 }
 
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.5rem 5rem;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .btn--pink {
+    margin-top: 1rem;
+    background: var(--color-pink);
+    color: #fff;
+  }
+}
+
 /* Grid */
 .grid {
   display: grid;
@@ -70,6 +104,86 @@ h4 {
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 40% 60%);
+  }
+}
+
+/* Blocks */
+.block {
+  padding: 1.5rem 3.5rem;
+}
+
+.block__header {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--hero {
+  background: var(--color-pale-cyan);
+  background-image: url(../images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block--hero {
+    background: var(--color-pale-cyan);
+    background-image: url(../images/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+  }
+
+  .block__header {
+    text-align: left;
+    align-self: center;
+    margin-left: 2rem;
+  }
+}
+
+/* Hero */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+  transform: translateY(5px);
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+  }
+
+  .logo {
+    width: 80%;
+    height: 80%;
+    transform: translateY(5px);
+  }
+
+  .hero__image {
+    max-width: 80%;
+  }
+
+  .hero--image {
+    text-align: right;
   }
 }

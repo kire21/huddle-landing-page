@@ -21,7 +21,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
-  color: var(--color-dark-cyan);
+  color: var(--color-grayish-blue);
 }
 
 h1,
@@ -31,6 +31,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.5;
+  color: var(--color-dark-cyan);
 }
 
 h1 {
@@ -83,7 +84,7 @@ h1 {
   .btn {
     font-size: 1.8rem;
     font-weight: 700;
-    padding: 1.5rem 5rem;
+    padding: 2rem 5rem;
     border: 0;
     border-radius: 40px;
     cursor: pointer;
@@ -104,13 +105,21 @@ h1 {
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
-    grid-template-columns: repeat(2, 40% 60%);
+    grid-template-columns: 35% 65%;
+  }
+
+  .grid--1x2-middle {
+    grid-template-columns: 63% 37%;
   }
 }
 
 /* Blocks */
 .block {
   padding: 1.5rem 3.5rem;
+}
+
+.block--feature {
+  padding: 0 2rem;
 }
 
 .block__header {
@@ -128,8 +137,12 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.block__header-dark {
+  color: var(--color-dark-cyan);
+}
+
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -140,10 +153,17 @@ h1 {
     background-repeat: no-repeat;
   }
 
+  .block--feature {
+    padding: 0;
+  }
+
+  .block__header-dark {
+    margin-left: 10rem;
+  }
+
   .block__header {
     text-align: left;
     align-self: center;
-    margin-left: 2rem;
   }
 }
 
@@ -170,7 +190,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 5rem;
+    padding: 3rem 13rem;
   }
 
   .logo {
@@ -180,10 +200,53 @@ h1 {
   }
 
   .hero__image {
-    max-width: 80%;
+    max-width: 70%;
   }
 
   .hero--image {
+    text-align: center;
+  }
+}
+
+/* Feature */
+.feature {
+  margin-top: 6rem;
+}
+
+.feature__image {
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+}
+
+.feature__image-middle {
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    margin-top: 10rem;
+  }
+
+  .feature__image {
+    width: 60%;
+  }
+
+  .feature__image-middle {
+    width: 60%;
+  }
+
+  .feature--image {
     text-align: right;
+  }
+
+  .feature--image-middle {
+    text-align: left;
+  }
+
+  .feature:nth-of-type(odd) .feature--image {
+    order: 1;
   }
 }

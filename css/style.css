@@ -59,7 +59,7 @@ h1 {
   margin-top: 2rem;
   margin-bottom: 4rem;
   background: var(--color-pink);
-  color: #fff;
+  color: var(--color-pale-cyan);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -95,7 +95,7 @@ h1 {
   .btn--pink {
     margin-top: 1rem;
     background: var(--color-pink);
-    color: #fff;
+    color: var(--color-pale-cyan);
   }
 }
 
@@ -117,6 +117,11 @@ h1 {
 /* Blocks */
 .block {
   padding: 1.5rem 3.5rem;
+}
+
+.block--dark {
+  background: var(--color-dark-cyan);
+  color: var(--color-pale-cyan);
 }
 
 .block--feature {
@@ -254,9 +259,10 @@ h1 {
 
 /* Callouts */
 .callout {
-  margin: 15rem 2rem 0rem 2rem;
+  margin: 15rem 2rem -10rem 2rem;
   padding: 4rem;
   border-radius: 20px;
+  position: relative;
 }
 
 .callout .grid {
@@ -264,7 +270,7 @@ h1 {
 }
 
 .callout--primary {
-  background: gold;
+  background: #fff;
   color: #fff;
 }
 
@@ -276,4 +282,103 @@ h1 {
 .callout .btn {
   margin-bottom: 3rem;
   justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout {
+    margin: 15rem 2rem -10rem 2rem;
+    padding: 4rem 20rem;
+    border-radius: 20px;
+    max-width: max-content;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .callout {
+    margin: 15rem auto -10rem auto;
+    padding: 4rem 20rem;
+    border-radius: 20px;
+    max-width: max-content;
+    position: relative;
+  }
+}
+
+/* Footer */
+footer {
+  background: gold;
+}
+
+.callout__sections {
+  margin-top: 20rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 0.7rem 0;
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--color-pale-cyan);
+}
+
+.footer__section {
+  padding: 2rem 0;
+}
+
+.fab {
+  border: 1px solid var(--color-pale-cyan);
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.fa-facebook-f {
+  border: 1px solid var(--color-pale-cyan);
+  padding: 1rem 1.2rem;
+  border-radius: 100%;
+}
+
+.fa-twitter {
+  border: 1px solid var(--color-pale-cyan);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.footer__section-content {
+  padding: 1rem 0;
+}
+
+.footer__icons,
+.footer__copyright {
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__section {
+    padding: 0;
+  }
+
+  .footer_menu {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+  }
+
+  .footer__copyright {
+    justify-items: end;
+  }
 }
